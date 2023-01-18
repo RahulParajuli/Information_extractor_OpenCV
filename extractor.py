@@ -27,6 +27,7 @@ def get_ocr_result(image1):
             cv2.rectangle(image,(x,y),(x+w,y+h),(0,0,255),1)
             #extracting the ROI
             ROI1 = image[y:y+h,x:x+w]
+
             # cv2.imwrite('ROI_{}.png'.format(x),ROI)
             #extracting the text from the ROI
             data = pytesseract.image_to_string(ROI1, lang='eng',config='--psm 6', output_type=Output.DICT)
