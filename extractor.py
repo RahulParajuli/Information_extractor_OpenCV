@@ -11,7 +11,6 @@ def get_ocr_result(image1):
     input parameter: image
     output: dictionary of ocr results
     """
-
     ret,thresh_value = cv2.threshold(image1,180,255,cv2.THRESH_BINARY_INV)
     kernel = np.ones((5,5),np.uint8)
     dilated_value = cv2.dilate(thresh_value,kernel,iterations = 1)
