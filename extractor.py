@@ -6,6 +6,7 @@ from pdf2image import convert_from_path
 import re
 import json
 
+
 def get_ocr_result(image1):
     """
     input parameter: image
